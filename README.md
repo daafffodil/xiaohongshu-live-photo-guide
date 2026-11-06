@@ -8,6 +8,20 @@
 
 shamsham 的完整实现见[文字动效、live图生成与小红书发布说明](docs/shamsham-project-explained.md)。说明区分了八种动效：只有“路径”参考照片的明暗和纹理，另外七种按预设规则运动，并讲解封面与 MP4 配对、临时文件和原生编辑页的连接。
 
+## 运行与改造
+
+包含最新路径效果的 [shamsham 1.0.13 完整源码](source/shamsham-1.0.13/README.md)已经提供，带离线字体、素材、编码器、发布逻辑和本地启动脚本，不需要安装 npm 依赖。
+
+```sh
+git clone https://github.com/daafffodil/xiaohongshu-live-photo-guide.git
+cd xiaohongshu-live-photo-guide/source/shamsham-1.0.13
+node server.mjs
+```
+
+打开 http://127.0.0.1:4187/ 。[复现说明](source/shamsham-1.0.13/README.md)介绍如何单独复用路径动画、替换画面绘制、生成 live图和接入自己的小红书小工具。
+
+1.0.13 用于学习和本地复现，尚未获用户真机发布确认；它没有替代历史成功版本。手机原生发布需要小红书容器，普通浏览器只能体验页面和动效。
+
 ## 接入方式
 
 使用小工具容器注入的 `window.xhs.miniTool.postNote`，把素材、标题和正文交给原生笔记编辑页，用户在那里编辑并决定是否发布。不需要自行实现小红书草稿页面，也不需要先把 live图保存到手机相册。

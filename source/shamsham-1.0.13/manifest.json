@@ -1,0 +1,90 @@
+{
+  "version": "1.0.13",
+  "archive": "../shamsham-1.0.13.zip",
+  "archiveBytes": 6699781,
+  "archiveSha256": "50e00bab00b02c4670c117864ebac17ee3dd26cc730bffce8fa3d5ef26805eb6",
+  "appFilesMatchSubmittedArchive": true,
+  "phoneVerified": false,
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 37065,
+      "sha256": "cd7f092dcb9c1a3565267d8952f751ae45bb4e7c460d932aff22474e1d5b0fa4"
+    },
+    {
+      "path": "assets/default.jpg",
+      "bytes": 777044,
+      "sha256": "a6a676fc75cca7d8cc2722d21bfc729aef5994fbb30c877153a703862e0a35b3"
+    },
+    {
+      "path": "assets/fonts/chenyu.woff2",
+      "bytes": 2034592,
+      "sha256": "7a4480e28f8b2890515c8dfcca7c7ef414e43d4a3dbbc4c9914957857e730f73"
+    },
+    {
+      "path": "assets/fonts/dm-serif-display.woff2",
+      "bytes": 31848,
+      "sha256": "c7db246022f78c648a74160497b86ae336e66563dcb5bd5efcb706daaf339987"
+    },
+    {
+      "path": "assets/fonts/xiaolai.woff2",
+      "bytes": 1623028,
+      "sha256": "5d55fe71163edf49f66b0c10610012a7af531697ff0e0672c4699801848b2804"
+    },
+    {
+      "path": "assets/fonts/yozai.woff2",
+      "bytes": 2193612,
+      "sha256": "8a1a520e2d41461ec5dd6ee7115bcf1447b77ce0c6d92e904a6052cf089a2e0d"
+    },
+    {
+      "path": "captions.js",
+      "bytes": 5835,
+      "sha256": "941ccbac22af093b49ed4e941e92ef4bb51ffde12330cea69e537ffbac6cf754"
+    },
+    {
+      "path": "fonts.css",
+      "bytes": 581,
+      "sha256": "618d14062239293f265572594974a897838c5cfc206d84f300a1cd48820fd72d"
+    },
+    {
+      "path": "index.html",
+      "bytes": 12384,
+      "sha256": "d4e6ddeb9bf3b2247f6723e76c6a7e386c6afe77850214ace384228a20603699"
+    },
+    {
+      "path": "licenses/open-source.json",
+      "bytes": 20186,
+      "sha256": "f9605a6b47cf9c2e6bcbf1aa752e3fdb93b0fa4ffc0086539c4a727663df86c7"
+    },
+    {
+      "path": "motion.js",
+      "bytes": 2390,
+      "sha256": "7f57f483864d542b28abcf38e9b168c9640d17b30f84ce55b602551cbcfdc52c"
+    },
+    {
+      "path": "mp4.js",
+      "bytes": 7852,
+      "sha256": "4a341c6e404ee9953c9c33c573ad9c3c81891637ffa3316d950579978d3079f1"
+    },
+    {
+      "path": "path.js",
+      "bytes": 7506,
+      "sha256": "7378d8197d5eeb1a41c6daa45079372fd9472398e5f4c2b5d2e22df39f7b152c"
+    },
+    {
+      "path": "publish-entry.js",
+      "bytes": 1996,
+      "sha256": "7ab6656b46c499e96c730492d4cad56669cafb79dcea2689a05bbf08cecde034"
+    },
+    {
+      "path": "style.css",
+      "bytes": 9581,
+      "sha256": "38d66da1718ea47b7f7ed719338a1779a99ce0df46b5f7d1953c949d9ee0322f"
+    },
+    {
+      "path": "vendor/anime.min.js",
+      "bytes": 17384,
+      "sha256": "bceef94f964481f7680d95e7fbbe5a8c20d3945a926a754874898a578db7c7ab"
+    }
+  ]
+}
