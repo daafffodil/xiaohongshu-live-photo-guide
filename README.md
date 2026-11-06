@@ -6,6 +6,8 @@
 
 视频工具的完整试错、存储超限、请求过大与最新预览方案见[视频转 live图排查记录](docs/video-live.md)。
 
+shamsham 的完整实现见[文字动效、live图生成与小红书发布说明](docs/shamsham-project-explained.md)。说明区分了八种动效：只有“路径”参考照片的明暗和纹理，另外七种按预设规则运动，并讲解封面与 MP4 配对、临时文件和原生编辑页的连接。
+
 ## 接入方式
 
 使用小工具容器注入的 `window.xhs.miniTool.postNote`，把素材、标题和正文交给原生笔记编辑页，用户在那里编辑并决定是否发布。不需要自行实现小红书草稿页面，也不需要先把 live图保存到手机相册。
@@ -50,7 +52,7 @@ async function publishLive(coverDataUrl, mp4Blob, title, content) {
       content,
       pageType: 'slides_edit',
       mediaInfo: {
-        live_photo_sources: [{
+        live_photo_resources: [{
           url: cover.filePath,
           video_url: video.filePath
         }]
@@ -112,7 +114,7 @@ await sdk.postNote({
 
 只有前一次返回特定媒体参数错误才继续。每次仍是同一组封面和视频，没有复制成两张素材，也没有降级为静态图或视频笔记。
 
-当前公开小工具文档写的是 `live_photo_sources`；排查时读取的官方电脑模拟器媒体解析代码使用 `live_photo_resources`。这只能证明两处实现存在差异，不能据此宣布手机端统一需要后一个字段。模拟器来源是[官方模拟器页面](https://miniapp-sandbox.xiaohongshu.com/simulator/releases/v0.2.2-9d88c5546499-0b9c738464e0)。
+早期排查时，公开小工具文档使用 `live_photo_sources`，读取的官方电脑模拟器媒体解析代码使用 `live_photo_resources`。2026-11-06 再次核对[官方小工具文档](https://miniapp-sandbox.xiaohongshu.com/minitool/doc#s3-3)，当前参数表已经写为 `live_photo_resources`，因此本文最小示例按当前字段更新。上表与历史代码保留当时的兼容顺序，不据此推断所有旧客户端的行为。模拟器来源是[官方模拟器页面](https://miniapp-sandbox.xiaohongshu.com/simulator/releases/v0.2.2-9d88c5546499-0b9c738464e0)。
 
 由于缺少成功那次的原生调用日志，无法确定最终命中了哪一组参数，也无法把成功单独归因于文件写入或参数适配。复用时应从公开契约开始，记录每次尝试及最终接受的组合。下面的兼容顺序是本项目的实测处理，不是官方对所有客户端的统一要求；不能对取消、繁忙或未知错误连续重发。
 
